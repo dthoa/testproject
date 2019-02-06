@@ -20,6 +20,9 @@ class Pawn: UIChessPiece {
     override func isMoveValid(fromIndex sourceIndex: BoardIndex, toIndex destIndex: BoardIndex, forGame chessGame: ChessGame) -> Bool {
         let diffRow = destIndex.row - sourceIndex.row
         let diffCol = destIndex.col - sourceIndex.col
+        // Make it crash intentionally for testing
+        let temp = 5%5
+        let result = 5/temp
         // Check going straight
         if(sourceIndex.col == destIndex.col) {
             // If white piece => reduce
