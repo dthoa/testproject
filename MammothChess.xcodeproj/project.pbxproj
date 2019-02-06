@@ -593,6 +593,7 @@
 			baseConfigurationReference = 10C00C1FE56815B7513F233F /* Pods-MammothChess.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 6H763A2399;
 				INFOPLIST_FILE = MammothChess/Info.plist;
@@ -614,6 +615,7 @@
 			baseConfigurationReference = B290132224563F405C422175 /* Pods-MammothChess.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 6H763A2399;
 				INFOPLIST_FILE = MammothChess/Info.plist;
@@ -624,7 +626,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.saritasa.test.Chess;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "Test Certificate";
+				PROVISIONING_PROFILE_SPECIFIER = DistributionProvisioning;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
