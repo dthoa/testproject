@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		72061FD39895E2619BFF13A6 /* Pods_MammothChessTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB3E3D512B63EE8EAF4A170B /* Pods_MammothChessTests.framework */; };
+		7FE2A74070A53FA6FE7A03F4 /* Pods_MammothChess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C56501E540515FF444736E4F /* Pods_MammothChess.framework */; };
 		CAA9E64221DD6307008E5247 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA9E64121DD6307008E5247 /* AppDelegate.swift */; };
 		CAA9E64421DD6307008E5247 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA9E64321DD6307008E5247 /* ViewController.swift */; };
 		CAA9E64721DD6307008E5247 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAA9E64521DD6307008E5247 /* Main.storyboard */; };
@@ -29,6 +31,7 @@
 		CAA9E68921DD6422008E5247 /* BoardIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA9E68821DD6422008E5247 /* BoardIndex.swift */; };
 		CAA9E68B21DD6435008E5247 /* StartScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA9E68A21DD6435008E5247 /* StartScreen.swift */; };
 		CAA9E68D21DD793A008E5247 /* AbstractUIChessPiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA9E68C21DD793A008E5247 /* AbstractUIChessPiece.swift */; };
+		FC377F09D502FC1688B5C4E0 /* Pods_MammothChessUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77A3F0C941AF77C3E15A94E7 /* Pods_MammothChessUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,8 +55,10 @@
 		10C00C1FE56815B7513F233F /* Pods-MammothChess.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MammothChess.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MammothChess/Pods-MammothChess.debug.xcconfig"; sourceTree = "<group>"; };
 		5DEDBA69F90A7DE0D8B1D13A /* Pods-MammothChessUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MammothChessUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MammothChessUITests/Pods-MammothChessUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		6E50D4575EB0D9F1F76500D8 /* Pods-MammothChessTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MammothChessTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MammothChessTests/Pods-MammothChessTests.release.xcconfig"; sourceTree = "<group>"; };
+		77A3F0C941AF77C3E15A94E7 /* Pods_MammothChessUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MammothChessUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1650671D26448C2E01EF803 /* Pods-MammothChessTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MammothChessTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MammothChessTests/Pods-MammothChessTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B290132224563F405C422175 /* Pods-MammothChess.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MammothChess.release.xcconfig"; path = "Pods/Target Support Files/Pods-MammothChess/Pods-MammothChess.release.xcconfig"; sourceTree = "<group>"; };
+		C56501E540515FF444736E4F /* Pods_MammothChess.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MammothChess.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAA9E63E21DD6307008E5247 /* MammothChess.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MammothChess.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAA9E64121DD6307008E5247 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CAA9E64321DD6307008E5247 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -82,6 +87,7 @@
 		CAA9E68821DD6422008E5247 /* BoardIndex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardIndex.swift; sourceTree = "<group>"; };
 		CAA9E68A21DD6435008E5247 /* StartScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreen.swift; sourceTree = "<group>"; };
 		CAA9E68C21DD793A008E5247 /* AbstractUIChessPiece.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractUIChessPiece.swift; sourceTree = "<group>"; };
+		CB3E3D512B63EE8EAF4A170B /* Pods_MammothChessTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MammothChessTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF75608015302B34C17E8616 /* Pods-MammothChessUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MammothChessUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MammothChessUITests/Pods-MammothChessUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -90,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FE2A74070A53FA6FE7A03F4 /* Pods_MammothChess.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72061FD39895E2619BFF13A6 /* Pods_MammothChessTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,6 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC377F09D502FC1688B5C4E0 /* Pods_MammothChessUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,6 +122,9 @@
 		2D2C2BA4479D4361CF0A2C9D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C56501E540515FF444736E4F /* Pods_MammothChess.framework */,
+				CB3E3D512B63EE8EAF4A170B /* Pods_MammothChessTests.framework */,
+				77A3F0C941AF77C3E15A94E7 /* Pods_MammothChessUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -597,7 +609,7 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 6H763A2399;
 				INFOPLIST_FILE = MammothChess/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -620,7 +632,7 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 6H763A2399;
 				INFOPLIST_FILE = MammothChess/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
