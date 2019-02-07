@@ -148,8 +148,8 @@ class ChessGame: NSObject {
             return 0
         }
         
-        for row in 0..<theChessBoard.ROWS{
-            for col in 0..<theChessBoard.COLS{
+        for row in 0..<ChessBoard.ROWS{
+            for col in 0..<ChessBoard.COLS{
                 if theChessBoard.board[row][col] is UIChessPiece{
                     
                     let dest = BoardIndex(row: row, col: col)
@@ -245,8 +245,8 @@ class ChessGame: NSObject {
                     continue searchForUndefendedWhitePieces
                 }
                 
-                for row in 0..<theChessBoard.ROWS{
-                    for col in 0..<theChessBoard.COLS{
+                for row in 0..<ChessBoard.ROWS{
+                    for col in 0..<ChessBoard.COLS{
                         
                         guard let defendingChessPiece = theChessBoard.board[row][col] as? UIChessPiece, defendingChessPiece.color == #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1) else {
                             continue
@@ -271,8 +271,8 @@ class ChessGame: NSObject {
         var arrayOfMoves: [BoardIndex] = []
         let source = theChessBoard.getIndex(forChessPiece: piece)!
         
-        for row in 0..<theChessBoard.ROWS {
-            for col in 0..<theChessBoard.COLS {
+        for row in 0..<ChessBoard.ROWS {
+            for col in 0..<ChessBoard.COLS {
                 let dest = BoardIndex(row: row, col: col)
                 if isNormalMoveValid(forPiece: piece, fromIndex: source, toIndex: dest) {
                     arrayOfMoves.append(dest)
@@ -349,8 +349,8 @@ class ChessGame: NSObject {
             print("Something Wrong")
             return false;
         }
-        for row in 0 ..< theChessBoard.ROWS{
-            for col in 0 ..< theChessBoard.COLS{
+        for row in 0 ..< ChessBoard.ROWS{
+            for col in 0 ..< ChessBoard.COLS{
                 if let anotherPiece = self.theChessBoard.board[row][col] as? UIChessPiece {
                     if(anotherPiece.color != piece.color && anotherPiece.isMoveValid(fromIndex: BoardIndex(row: row, col: col), toIndex: pieceIndex!, forGame: self)) {
                         return true;
@@ -388,10 +388,10 @@ class ChessGame: NSObject {
     }
     
     func isMoveOnBoard(forPieceFrom sourceIndex: BoardIndex, thatGoesTo destIndex: BoardIndex) -> Bool {
-        if case 0 ..< theChessBoard.ROWS = sourceIndex.row {
-            if case 0 ..< theChessBoard.COLS = sourceIndex.col {
-                if case 0..<theChessBoard.ROWS = destIndex.row {
-                    if case 0..<theChessBoard.COLS = destIndex.col {
+        if case 0 ..< ChessBoard.ROWS = sourceIndex.row {
+            if case 0 ..< ChessBoard.COLS = sourceIndex.col {
+                if case 0..<ChessBoard.ROWS = destIndex.row {
+                    if case 0..<ChessBoard.COLS = destIndex.col {
                         return true;
                     }
                 }

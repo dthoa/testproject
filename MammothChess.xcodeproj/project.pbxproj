@@ -30,6 +30,7 @@
 		CAA9E68921DD6422008E5247 /* BoardIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA9E68821DD6422008E5247 /* BoardIndex.swift */; };
 		CAA9E68B21DD6435008E5247 /* StartScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA9E68A21DD6435008E5247 /* StartScreen.swift */; };
 		CAA9E68D21DD793A008E5247 /* AbstractUIChessPiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA9E68C21DD793A008E5247 /* AbstractUIChessPiece.swift */; };
+		CAE27F19220B8349003AB174 /* UICollectionViewCellPiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE27F18220B8349003AB174 /* UICollectionViewCellPiece.swift */; };
 		F380306BC5FC0911A0DB32A8 /* Pods_MammothChessUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1282CEE7D62C99A667958BD9 /* Pods_MammothChessUITests.framework */; };
 		FDED0A2ECF836B5C3DBF0148 /* Pods_MammothChess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70B4EA52C21A3E564ED3B683 /* Pods_MammothChess.framework */; };
 /* End PBXBuildFile section */
@@ -87,6 +88,7 @@
 		CAA9E68821DD6422008E5247 /* BoardIndex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardIndex.swift; sourceTree = "<group>"; };
 		CAA9E68A21DD6435008E5247 /* StartScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreen.swift; sourceTree = "<group>"; };
 		CAA9E68C21DD793A008E5247 /* AbstractUIChessPiece.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractUIChessPiece.swift; sourceTree = "<group>"; };
+		CAE27F18220B8349003AB174 /* UICollectionViewCellPiece.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewCellPiece.swift; sourceTree = "<group>"; };
 		D0190F2D3A45644D809498C7 /* Pods-MammothChessUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MammothChessUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MammothChessUITests/Pods-MammothChessUITests.release.xcconfig"; sourceTree = "<group>"; };
 		D67C55006F0B572588331E49 /* Pods_MammothChessTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MammothChessTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -183,6 +185,7 @@
 				CAA9E68A21DD6435008E5247 /* StartScreen.swift */,
 				CAA9E67221DD6342008E5247 /* Piece.swift */,
 				CAA9E64321DD6307008E5247 /* ViewController.swift */,
+				CAE27F18220B8349003AB174 /* UICollectionViewCellPiece.swift */,
 				CAA9E64521DD6307008E5247 /* Main.storyboard */,
 				CAA9E64B21DD6308008E5247 /* Assets.xcassets */,
 				CAA9E64D21DD6308008E5247 /* LaunchScreen.storyboard */,
@@ -422,6 +425,7 @@
 				CAA9E64421DD6307008E5247 /* ViewController.swift in Sources */,
 				CAA9E68321DD63E2008E5247 /* ChessGame.swift in Sources */,
 				CAA9E67B21DD63A8008E5247 /* Bishop.swift in Sources */,
+				CAE27F19220B8349003AB174 /* UICollectionViewCellPiece.swift in Sources */,
 				CAA9E67F21DD63B7008E5247 /* Queen.swift in Sources */,
 				CAA9E68D21DD793A008E5247 /* AbstractUIChessPiece.swift in Sources */,
 				CAA9E68B21DD6435008E5247 /* StartScreen.swift in Sources */,

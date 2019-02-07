@@ -16,6 +16,8 @@ class ViewController: UIViewController {
     
     @IBOutlet var panOUTLET: UIPanGestureRecognizer!
     
+    @IBOutlet weak var vwBoard: UICollectionView!
+    
     var pieceDragged: UIChessPiece!
     var sourceOrigin: CGPoint!
     var destOrigin: CGPoint!
@@ -23,18 +25,35 @@ class ViewController: UIViewController {
     
     static var SPACE_FROM_LEFT_EDGE: Int = 36;
     static var SPACE_FROM_TOP_EDGE: Int = 114;
-    static var TILE_SIZE: Int = 38;
+    static var TILE_SIZE: Int = 46;
+    static var ROW = 8
+    static var COL = 8
+    
     var myChessGame: ChessGame!
     var chessPieces: [UIChessPiece]!
     var isAgainstAI: Bool!
     
-    override func viewDidLoad() {
+    func _viewDidLoad() {
         super.viewDidLoad()
+        let boardWidth = CGFloat(ViewController.TILE_SIZE*ChessBoard.COLS)
+        let boardHeight = CGFloat(ViewController.TILE_SIZE*ChessBoard.ROWS)
+        let vw:UIView = self.view
+        ViewController.SPACE_FROM_LEFT_EDGE = Int((vw.frame.width - boardWidth) / 2)
+        
+        vwBoard.frame = CGRect(
+            x: CGFloat(ViewController.SPACE_FROM_LEFT_EDGE),
+            y: CGFloat(ViewController.SPACE_FROM_TOP_EDGE),
+            width: boardWidth,
+            height: boardHeight)
         // Do any additional setup after loading the view, typically from a nib.
         
         chessPieces = []
         myChessGame = ChessGame(viewController: self);
         print("SINGLE PLAYER: \(isAgainstAI)")
+    }
+    
+    public func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -118,11 +137,7 @@ class ViewController: UIViewController {
             myChessGame.nextTurn()
             updateTurnOnScreen()
         }
-        
-        
-        
-        
-        
+
     }
     
     func displayWinner() {
@@ -211,3 +226,68 @@ class ViewController: UIViewController {
 
 }
 
+extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
+    override func viewDidLoad() {
+        //super.viewDidLoad()
+        _viewDidLoad()
+        
+        vwBoard.dataSource = self
+        vwBoard.delegate = self
+        vwBoard.register(UICollectionViewCellPiece.self, forCellWithReuseIdentifier: "BoardCell")
+        vwBoard.reloadData()
+    }
+    
+    
+    
+    // Data Source
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 8
+    }
+    
+    public func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 8
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BoardCell", for: indexPath)
+        if((indexPath.row % 2) ^ (indexPath.section % 2) == 0) {
+            cell.contentView.backgroundColor = UIColor(red: 1, green: 212/255.0, blue: 121/255.0, alpha: 1)
+        } else {
+            cell.contentView.backgroundColor = UIColor(red: 148/255.0, green: 82/255.0, blue: 0, alpha: 1)
+        }
+        return cell
+    }
+    
+    
+    // Flow
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        return CGSize(width: ViewController.TILE_SIZE, height: ViewController.TILE_SIZE)
+    }
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets.init(top: 0, left: 0, bottom: 0, right: 0)
+    }
+    
+    public func getUIBoard() -> UICollectionView {
+        return vwBoard
+    }
+    
+}

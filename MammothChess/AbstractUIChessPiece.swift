@@ -21,7 +21,8 @@ class UIChessPiece: ExtensionUIChessPiece {
         self.textColor = color;
         self.isUserInteractionEnabled = true;
         self.textAlignment = .center;
-        self.font = self.font.withSize(34);
+        self.font = self.font.withSize(40);
+        self.adjustsFontSizeToFitWidth = true
         self.lineBreakMode = .byClipping;
         vc.chessPieces.append(self);
         vc.view.addSubview(self);

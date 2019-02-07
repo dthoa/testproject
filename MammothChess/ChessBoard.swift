@@ -12,8 +12,8 @@ import UIKit
 class ChessBoard: NSObject {
     var board: [[Piece]]!
     var vc: ViewController!
-    let ROWS = 8;
-    let COLS = 8;
+    static let ROWS = 8;
+    static let COLS = 8;
     var whiteKing: King!
     var blackKing: King!
     
@@ -22,22 +22,22 @@ class ChessBoard: NSObject {
     init(viewController: ViewController) {
         vc = viewController;
         
-        let oneRowOfBoard = Array(repeating: Dummy(), count: COLS);
-        board = Array(repeating: oneRowOfBoard, count: ROWS);
+        let oneRowOfBoard = Array(repeating: Dummy(), count: ChessBoard.COLS);
+        board = Array(repeating: oneRowOfBoard, count: ChessBoard.ROWS);
         
-        for row in 0 ..< ROWS {
+        for row in 0 ..< ChessBoard.ROWS {
             let color = row < 4 ? #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1) : #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1) ;
-            for col in 0 ..< COLS {
+            for col in 0 ..< ChessBoard.COLS {
                 switch row {
                 case 0, 7:
                     switch col {
-                    case 0, COLS-1:
+                    case 0, ChessBoard.COLS-1:
                         board[row][col] = Rook(frame: ChessBoard.getFrame(forRow: row, forCol: col), color: color , vc: vc)
                         break;
-                    case 1, COLS-2:
+                    case 1, ChessBoard.COLS-2:
                         board[row][col] = Knight(frame: ChessBoard.getFrame(forRow: row, forCol: col), color: color , vc: vc)
                         break;
-                    case 2, COLS-3:
+                    case 2, ChessBoard.COLS-3:
                         board[row][col] = Bishop(frame: ChessBoard.getFrame(forRow: row, forCol: col), color: color , vc: vc)
                         break;
                     case 3:
@@ -71,6 +71,7 @@ class ChessBoard: NSObject {
         let x = CGFloat(ViewController.SPACE_FROM_LEFT_EDGE + col*ViewController.TILE_SIZE)
         let y = CGFloat(ViewController.SPACE_FROM_TOP_EDGE + row*ViewController.TILE_SIZE)
         
+        
         return CGRect( origin: CGPoint(x: x, y: y), size: CGSize(width: ViewController.TILE_SIZE, height: ViewController.TILE_SIZE));
     }
     
@@ -83,8 +84,8 @@ class ChessBoard: NSObject {
     }
     
     func getIndex(forChessPiece chessPieceToFind: UIChessPiece) -> BoardIndex?{
-        for row in 0..<ROWS{
-            for col in 0..<COLS{
+        for row in 0..<ChessBoard.ROWS{
+            for col in 0..<ChessBoard.COLS{
                 if let aChessPiece = board[row][col] as? UIChessPiece{
                     if chessPieceToFind == aChessPiece{
                         return BoardIndex(row: row, col: col)
