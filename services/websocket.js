@@ -80,7 +80,12 @@ var WebSocket = function() {
                 success: true,
 
             }
-            awsTranscribeCompleted(transcribeContext)
+            try {
+                awsTranscribeCompleted(transcribeContext)
+            } catch(e) {
+                console.log(e)
+                requestContext.wsResponse.sendEmptyResponse()
+            }
             
         }).catch(err => {
             console.log(err)
@@ -170,9 +175,9 @@ var WebSocket = function() {
                 let studentResult = null
                 var intentName = transcribeContext.transcribeData.intentName
                 if(intentName ==  "MathIntent"){
-                    var studentName = transcribeContext.transcribeData.slots.nameSlot.toLowerCase();
-                    if (studentName != null) {
-                        studentResult = classroom.detectStudentByName(studentName);    
+                    var studentName = transcribeContext.transcribeData.slots.nameSlot;
+                    if (studentName) {
+                        studentResult = classroom.detectStudentByName(studentName.toLowerCase());    
                     }
                 } else {
                     studentResult = classroom.detectStudent(inputTranscript);
