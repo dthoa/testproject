@@ -10,7 +10,7 @@ var EXTRA_AUDIO = 'extra_audio';
 var ANSWER_AUDIO = 'answer_audio';
 var ANSWER_TEXT = 'answer_text';
 var cache = {}
-var ws = new WebSocket('ws://localhost:40510');
+var ws = new WebSocket('ws://54.219.171.226:40510');
 
 
 // event emmited when connected
