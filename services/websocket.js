@@ -170,7 +170,7 @@ var WebSocket = function() {
                 let studentResult = null
                 var intentName = transcribeContext.transcribeData.intentName
                 if(intentName ==  "MathIntent"){
-                    var studentName = transcribeContext.transcribeData.slots.nameSlot
+                    var studentName = transcribeContext.transcribeData.slots.nameSlot.toLowerCase();
                     if (studentName != null) {
                         studentResult = classroom.detectStudentByName(studentName);    
                     }
